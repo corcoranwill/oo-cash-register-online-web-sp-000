@@ -8,10 +8,10 @@ cclass CashRegister
     @items = []
   end
 
-  def add_item(item, item_price, qty=1)
+  def add_item(title, item_price, qty=1)
     self.total += item_price * qty
     qty.times do
-      items << item
+      items << title
     end
     self.last_transaction = item_price * qty
   end
